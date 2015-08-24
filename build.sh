@@ -48,6 +48,7 @@ genDockerfile () {
 FROM scratch
 MAINTAINER Tom Nussbaumer <thomas.nussbaumer@gmx.net>
 COPY ./$2 /$2
+ENTRYPOINT ["/$2"]
 END_OF_BLOCK
   else  
     echo "[INFO] $1/Dockerfile exists"
